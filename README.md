@@ -53,7 +53,7 @@ CREATE TABLE Alunos
 ```
 <h5>Observação: O 'AUTOINCREMENT' realiza a inserção do próximo 'id' na tabela de forma 'automatica', sem a necessídade de inclusão do id no momento do insert.</h5>
 
-Populando a tabela de escolas e conferindo:
+Populando e conferindo a tabela escolas:
 ```
 INSERT INTO Escolas (nome_escola, data_alteracao)
 VALUES ('Escola Estadual Minas Gerais',DATETIME());
@@ -67,3 +67,60 @@ VALUES ('Escola Estadual Rio de Janeiro',DATETIME());
 SELECT * FROM Escolas;
 ```
 ![image](https://user-images.githubusercontent.com/60554958/145245857-4fbd2001-4f46-418c-b436-99c62037ccf5.png)
+
+Populando e conferindo a tabela professores:
+```
+INSERT INTO Professores (nome_professor, data_alteracao)
+VALUES ('Antonio',DATETIME());
+
+INSERT INTO Professores (nome_professor, data_alteracao)
+VALUES ('Maria',DATETIME());
+
+INSERT INTO Professores (nome_professor, data_alteracao)
+VALUES ('Carlos',DATETIME());
+
+INSERT INTO Professores (nome_professor, data_alteracao)
+VALUES ('Francine',DATETIME());
+
+SELECT * FROM Professores;
+```
+![image](https://user-images.githubusercontent.com/60554958/145247620-a826f16e-1a05-452d-bb00-c350af0b4602.png)
+
+Populando e conferindo a tabela alunos:
+```
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Everson',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Mariano',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Junior Alonso',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Nathan Silva',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Arana',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Jair',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Allan',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Matias Zaracho',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Keno',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Diego Costa',DATETIME());
+
+INSERT INTO Alunos (nome_aluno, data_alteracao)
+VALUES ('Hulk',DATETIME());
+
+SELECT * FROM Alunos;
+```
+![image](https://user-images.githubusercontent.com/60554958/145248276-1deeaeff-aa8c-4755-b10c-3b4d396231c9.png)
