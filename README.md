@@ -124,7 +124,7 @@ SELECT * FROM Alunos;
 ```
 ![image](https://user-images.githubusercontent.com/60554958/145248276-1deeaeff-aa8c-4755-b10c-3b4d396231c9.png)
 
-A Escola então contrata mais de um professor e o professor pode ser contratado por mais de uma escola, gerando contratados diferentes.
+A Escola então contrata mais de um professor e o professor pode ser contratado por mais de uma escola, gerando contratos diferentes, sendo assim, criaremos uma tabela chamada ContrataProfessores, onde armazenara a escola e o professor e o id de seu contrato e se ele se encontra ativo ou não, junto com as datas de criação do contrato e a data de vencimento do contrato.
 
 ```
 CREATE TABLE ContrataProfessor 
