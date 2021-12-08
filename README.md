@@ -22,9 +22,11 @@ Em uma sistema simples de escola, vamos precisa armazenar:
 2. Professores
 3. Escola
 
-Nessas tabelas, vamos armazenar o nome de cada entidade e sua respectiva data de criação/alteração no sistema.
+Nessas tabelas, vamos armazenar o nome de cada entidade e sua respectiva data de criação/alteração no sistema. Então o nosso modelo de dados ficará assim:
 
 ![image](https://user-images.githubusercontent.com/60554958/145243564-8bef8c6c-4ba0-42e3-ad7e-a23db0505cc9.png)
+
+O código sql para a criação dessas tabelas:
 
 ```
 CREATE TABLE Escolas 
