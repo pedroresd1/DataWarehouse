@@ -129,7 +129,7 @@ A Escola então contrata mais de um professor e o professor pode ser contratado 
 ```
 CREATE TABLE ContrataProfessor 
     (
-     id_contrato INTEGER NOT NULL , 
+     id_contrato INTEGER PRIMARY KEY AUTOINCREMENT , 
      data_contratacao DATE NOT NULL , 
      data_vencimento DATE NOT NULL , 
      sim_nao_ativo VARCHAR (3) NOT NULL , 
@@ -141,3 +141,31 @@ ALTER TABLE ContrataProfessor ADD COLUMN id_professor INTEGER REFERENCES Profess
 ALTER TABLE ContrataProfessor ADD COLUMN id_escola INTEGER REFERENCES Escolas(id_escola);
 ```
 ![image](https://user-images.githubusercontent.com/60554958/145251084-b3e0bd95-704d-4d3b-864f-8372c7b96012.png)
+
+Então vamos contratar os professores:
+
+```
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (1,1,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (1,2,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (2,2,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (2,3,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (3,1,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (3,2,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+INSERT INTO ContrataProfessor (id_escola, id_professor, data_contratacao, data_vencimento, sim_nao_ativo, data_alteracao)
+VALUES (3,4,DATE(), DATE('NOW', '+365 DAY'), 'SIM', DATETIME());
+
+SELECT * FROM ContrataProfessor;
+```
+![image](https://user-images.githubusercontent.com/60554958/145253189-f9cafb19-ba6a-47ad-843e-60f3379f879d.png)
