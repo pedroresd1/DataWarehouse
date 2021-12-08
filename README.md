@@ -123,3 +123,21 @@ VALUES ('Hulk',DATETIME());
 SELECT * FROM Alunos;
 ```
 ![image](https://user-images.githubusercontent.com/60554958/145248276-1deeaeff-aa8c-4755-b10c-3b4d396231c9.png)
+
+A Escola então contrata mais de um professor e o professor pode ser contratado por mais de uma escola, gerando contratados diferentes.
+
+```
+CREATE TABLE ContrataProfessor 
+    (
+     id_contrato INTEGER NOT NULL , 
+     data_contratacao DATE NOT NULL , 
+     data_vencimento DATE NOT NULL , 
+     sim_nao_ativo VARCHAR (3) NOT NULL , 
+     data_alteracao DATETIME 
+    );
+
+ALTER TABLE ContrataProfessor ADD COLUMN id_professor INTEGER REFERENCES Professores(id_professor);
+
+ALTER TABLE ContrataProfessor ADD COLUMN id_escola INTEGER REFERENCES Escolas(id_escola);
+```
+![image](https://user-images.githubusercontent.com/60554958/145251084-b3e0bd95-704d-4d3b-864f-8372c7b96012.png)
