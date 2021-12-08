@@ -51,3 +51,16 @@ CREATE TABLE Alunos
     );
 
 ```
+
+Populando as Escolas
+
+```
+INSERT INTO Escolas (nome_escola, data_alteracao)
+VALUES ('Escola Estadual Minas Gerais',DATETIME());
+
+INSERT INTO Escolas (nome_escola, data_alteracao)
+VALUES ('Escola Estadual São Paulo',DATETIME());
+
+INSERT INTO Escolas (nome_escola, data_alteracao)
+VALUES ('Escola Estadual Rio de Janeiro',DATETIME());
+```
