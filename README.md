@@ -13,7 +13,7 @@ Então vamos criar um banco dedados relacional onde possamos fazer a gestão de 
 Ao criar o nosso banco de dados.
 
 ```
-CREATE DATABASE db
+CREATE DATABASE db;
 ```
 
 Em uma sistema simples de escola, vamos precisa armazenar:
@@ -51,9 +51,9 @@ CREATE TABLE Alunos
     );
 
 ```
+<h5>Observação: O 'AUTOINCREMENT' realiza a inserção do próximo 'id' na tabela de forma 'automatica', sem a necessídade de inclusão do id no momento do insert.</h5>
 
-Populando as Escolas
-
+Populando a tabela de escolas e conferindo:
 ```
 INSERT INTO Escolas (nome_escola, data_alteracao)
 VALUES ('Escola Estadual Minas Gerais',DATETIME());
@@ -63,4 +63,7 @@ VALUES ('Escola Estadual São Paulo',DATETIME());
 
 INSERT INTO Escolas (nome_escola, data_alteracao)
 VALUES ('Escola Estadual Rio de Janeiro',DATETIME());
+
+SELECT * FROM Escolas;
 ```
+![image](https://user-images.githubusercontent.com/60554958/145245857-4fbd2001-4f46-418c-b436-99c62037ccf5.png)
